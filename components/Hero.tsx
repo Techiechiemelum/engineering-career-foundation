@@ -31,7 +31,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/60 to-transparent" />
 
       {/* Bottom Fade */}
-      <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-white" />
+      <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-white/30" />
 
       {/* Content */}
       <div className="relative z-10 mx-auto w-full max-w-7xl px-6 sm:px-10 lg:px-16 py-20">
@@ -48,7 +48,7 @@ export default function Hero() {
             We equip undergraduate and early-career engineers in Nigeria with
             the skills, mindset, and opportunities to thrive in their careers
             while creating lasting impact through mentorship, technical
-            training, and industry partnerships.
+            training and industry partnerships.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
