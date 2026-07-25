@@ -37,7 +37,7 @@ export default function AboutPage() {
           We started ECF because too many talented Nigerian engineers were
           graduating with strong technical foundations but limited exposure
           to the practical, professional and leadership skills employers
-          look for. Our programs close that gap — connecting students and
+          look for. Our programs close that gap connecting students and
           early-career engineers directly with mentors, industry tools and
           real-world opportunities.
         </p>
