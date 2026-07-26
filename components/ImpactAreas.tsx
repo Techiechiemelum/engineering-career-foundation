@@ -12,7 +12,7 @@ const AREAS = [
 export default function ImpactAreas() {
   return (
     <section className="px-6 sm:px-10 lg:px-16 py-14 border-t border-white-100">
-      <p className="text-xs font-bold tracking-[0.2em] text-gold text-center">
+      <p className="text-lg font-bold tracking-[0.2em] text-gold text-center">
         OUR IMPACT AREAS
       </p>
       <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-4">
