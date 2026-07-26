@@ -1,5 +1,9 @@
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
+export const metadata = {
+  title: "Engineering Mentorship Program",
+  description: "A three-month mentorship pairing you with experienced engineers to guide your career journey.",
+};
 
 export default function MentorshipPage() {
   return (

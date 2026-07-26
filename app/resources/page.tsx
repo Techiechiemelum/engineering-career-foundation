@@ -1,6 +1,10 @@
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
 import { FileText, Video, Link as LinkIcon, BookOpen } from "lucide-react";
+export const metadata = {
+  title: "Resources",
+  description: "CV templates, workshop recordings, reading lists, and tools to support your engineering career.",
+};
 
 const RESOURCES = [
   {

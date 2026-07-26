@@ -1,5 +1,9 @@
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
+export const metadata = {
+  title: "Engineering Skills Bootcamp",
+  description: "Hands-on training in industry-relevant tools and practical engineering skills.",
+};
 
 export default function SkillsBootcampPage() {
   return (

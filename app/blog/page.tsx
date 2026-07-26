@@ -1,6 +1,10 @@
 import Navbar from "@/components/Navbar";
 import { getPublishedPosts } from "@/lib/notion";
 import Link from "next/link";
+export const metadata = {
+  title: "Blog",
+  description: "Articles and insights for early-career engineers in Nigeria.",
+};
 
 export const revalidate = 60;
 

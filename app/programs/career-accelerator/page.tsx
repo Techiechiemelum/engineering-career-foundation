@@ -1,5 +1,9 @@
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
+export const metadata = {
+  title: "Career Accelerator",
+  description: "Helping students and graduates secure internships, graduate roles, and career advancement.",
+};
 
 export default function CareerAcceleratorPage() {
   return (

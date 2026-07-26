@@ -1,107 +1,121 @@
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Users, Briefcase, GraduationCap, Wrench } from "lucide-react";
 
-const STATS = [
-  { number: "500+", label: "Students Trained" },
-  { number: "30+", label: "Industry Mentors" },
-  { number: "15+", label: "University Partners" },
-  { number: "85%", label: "Career Readiness Satisfaction" },
+const HIGHLIGHTS = [
+  {
+    icon: Users,
+    title: "Industry Mentorship",
+  },
+  {
+    icon: Wrench,
+    title: "Technical Training",
+  },
+  {
+    icon: Briefcase,
+    title: "Career Development",
+  },
+  {
+    icon: GraduationCap,
+    title: "Professional Community",
+  },
 ];
 
 export default function Hero() {
   return (
-    <section
-      id="home"
-      className="relative bg-[#071B3B] overflow-hidden"
-    >
-      <div className="mx-auto max-w-7xl grid lg:grid-cols-2 min-h-[700px]">
+    <section id="home" className="relative bg-navy overflow-hidden">
 
-        {/* Left Content */}
-        <div className="flex items-center px-6 sm:px-10 lg:px-16 py-16">
+      <div className="mx-auto max-w-7xl grid lg:grid-cols-2">
+
+        {/* LEFT */}
+        <div className="flex items-center px-6 sm:px-10 lg:px-16 py-20">
+
           <div>
-            <p className="text-gold font-semibold uppercase tracking-widest text-sm">
+
+            <p className="uppercase tracking-[0.2em] text-gold font-semibold text-sm">
               Engineering Career Foundation
             </p>
 
-            <h1 className="mt-4 text-5xl lg:text-6xl font-extrabold leading-tight text-white">
+            <h1 className="mt-5 text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-white">
               Building Nigeria's
               <br />
               Next Generation of
-              <br />
-              <span className="text-gold">
+              <span className="block text-gold">
                 Industry-Ready Engineers
               </span>
             </h1>
 
-            <p className="mt-6 text-lg leading-8 text-white/80 max-w-xl">
-              Engineering Career Foundation equips undergraduate and
-              early-career engineers with the technical,
-              professional and leadership skills needed to thrive
-              in today's engineering industry.
+            <p className="mt-6 max-w-xl text-white/80 leading-8 text-lg">
+              We prepare undergraduate and early-career engineers
+              through mentorship, technical training, career
+              development and meaningful industry connections.
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">
+
               <a
                 href="#programs"
-                className="inline-flex items-center gap-2 rounded-lg bg-gold px-7 py-4 text-sm font-semibold text-navy transition hover:opacity-90"
+                className="rounded-lg bg-gold px-7 py-4 text-sm font-semibold text-navy hover:opacity-90 transition"
               >
-                Apply for Programs
-                <ArrowRight size={18} />
+                Explore Programmes
               </a>
 
               <a
                 href="#community"
-                className="inline-flex items-center gap-2 rounded-lg border border-white px-7 py-4 text-sm font-semibold text-white transition hover:bg-white hover:text-navy"
+                className="rounded-lg border border-white px-7 py-4 text-sm font-semibold text-white hover:bg-white hover:text-navy transition"
               >
-                Become a Partner
-                <ArrowRight size={18} />
+                Join Our Community
               </a>
+
             </div>
+
           </div>
+
         </div>
 
-        {/* Right Image */}
-        <div className="relative min-h-[450px] lg:min-h-full">
+        {/* RIGHT */}
+
+        <div className="relative min-h-[500px]">
 
           <Image
             src="/images/hero-engineers.jpg.jpeg"
             alt="Engineering students"
             fill
             priority
-            sizes="50vw"
             className="object-cover"
           />
 
-          {/* Dark Overlay */}
-          <div className="absolute inset-0 bg-black/20"></div>
-
-          {/* Orange Curve */}
-          <div className="absolute bottom-0 right-0 h-48 w-72 rounded-tl-full bg-gold"></div>
+          <div className="absolute inset-0 bg-gradient-to-l from-transparent to-navy/40" />
 
         </div>
+
       </div>
 
-      {/* Floating Stats Card */}
-      <div className="relative mx-auto -mt-16 max-w-6xl px-6 pb-10">
-        <div className="grid grid-cols-2 md:grid-cols-4 overflow-hidden rounded-3xl bg-white shadow-2xl">
+      {/* HIGHLIGHTS */}
 
-          {STATS.map((item) => (
+      <div className="relative z-20 mx-auto max-w-6xl px-6 -mt-10">
+
+        <div className="grid grid-cols-2 lg:grid-cols-4 rounded-3xl bg-white shadow-2xl overflow-hidden">
+
+          {HIGHLIGHTS.map(({ icon: Icon, title }) => (
+
             <div
-              key={item.label}
-              className="border-r last:border-r-0 border-gray-200 py-10 text-center"
+              key={title}
+              className="flex flex-col items-center justify-center p-8 border border-gray-100"
             >
-              <h3 className="text-4xl font-extrabold text-navy">
-                {item.number}
-              </h3>
+              <Icon className="h-9 w-9 text-gold mb-4" />
 
-              <p className="mt-2 text-sm text-gray-600">
-                {item.label}
+              <p className="font-semibold text-center text-navy">
+                {title}
               </p>
+
             </div>
+
           ))}
 
         </div>
+
       </div>
+
     </section>
   );
 }

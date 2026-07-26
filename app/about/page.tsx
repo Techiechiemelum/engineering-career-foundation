@@ -1,5 +1,9 @@
 import Navbar from "@/components/Navbar";
 import { Target, Eye, Award, ShieldCheck, Lightbulb, HandHeart, Handshake, BookOpen } from "lucide-react";
+export const metadata = {
+  title: "About Us",
+  description: "Learn about Engineering Career Foundation's mission, vision, and impact preparing Nigerian engineers for successful careers.",
+};
 
 const VALUES = [
   { icon: Award, label: "Excellence" },

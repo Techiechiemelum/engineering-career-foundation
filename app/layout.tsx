@@ -10,9 +10,28 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Engineering Career Foundation | Empowering Engineers. Building Futures.",
+  metadataBase: new URL("https://engineering-career-foundation-1xdo.vercel.app"),
+  title: {
+    default: "Engineering Career Foundation | Empowering Engineers. Building Futures.",
+    template: "%s | Engineering Career Foundation",
+  },
   description:
     "We equip undergraduate and early-career engineers in Nigeria with the skills, mindset, and opportunities to thrive in their careers and make lasting impact.",
+  openGraph: {
+    title: "Engineering Career Foundation",
+    description:
+      "Empowering undergraduate and early-career engineers in Nigeria through mentorship, technical training, and career development.",
+    url: "https://engineering-career-foundation-1xdo.vercel.app",
+    siteName: "Engineering Career Foundation",
+    locale: "en_NG",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Engineering Career Foundation",
+    description:
+      "Empowering undergraduate and early-career engineers in Nigeria through mentorship, technical training, and career development.",
+  },
 };
 
 export default function RootLayout({
