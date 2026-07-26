@@ -1,88 +1,105 @@
 import Image from "next/image";
-import { Lightbulb, TrendingUp, User, Users } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
-const FEATURES = [
-  { icon: Lightbulb, label: "Practical Training" },
-  { icon: TrendingUp, label: "Career Growth" },
-  { icon: User, label: "Leadership" },
-  { icon: Users, label: "Community" },
+const STATS = [
+  { number: "500+", label: "Students Trained" },
+  { number: "30+", label: "Industry Mentors" },
+  { number: "15+", label: "University Partners" },
+  { number: "85%", label: "Career Readiness Satisfaction" },
 ];
 
 export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center overflow-hidden"
+      className="relative bg-[#071B3B] overflow-hidden"
     >
-      {/* Background Image */}
-      <Image
-        src="/images/hero-engineers.jpg.jpeg"
-        alt="Two engineers in hard hats standing at a construction site"
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover"
-      />
+      <div className="mx-auto max-w-7xl grid lg:grid-cols-2 min-h-[700px]">
 
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/55" />
+        {/* Left Content */}
+        <div className="flex items-center px-6 sm:px-10 lg:px-16 py-16">
+          <div>
+            <p className="text-gold font-semibold uppercase tracking-widest text-sm">
+              Engineering Career Foundation
+            </p>
 
-      {/* Left Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/60 to-transparent" />
+            <h1 className="mt-4 text-5xl lg:text-6xl font-extrabold leading-tight text-white">
+              Building Nigeria's
+              <br />
+              Next Generation of
+              <br />
+              <span className="text-gold">
+                Industry-Ready Engineers
+              </span>
+            </h1>
 
-      {/* Bottom Fade */}
-      <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-white/30" />
+            <p className="mt-6 text-lg leading-8 text-white/80 max-w-xl">
+              Engineering Career Foundation equips undergraduate and
+              early-career engineers with the technical,
+              professional and leadership skills needed to thrive
+              in today's engineering industry.
+            </p>
 
-      {/* Content */}
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-6 sm:px-10 lg:px-16 py-20">
-        <div className="max-w-2xl">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-white">
-            Empowering
-            <br />
-            Engineers.
-            <br />
-            <span className="text-gold">Building Futures.</span>
-          </h1>
-
-          <p className="mt-6 text-lg leading-relaxed text-white/90 max-w-xl">
-            We equip undergraduate and early-career engineers in Nigeria with
-            the skills, mindset, and opportunities to thrive in their careers
-            while creating lasting impact through mentorship, technical
-            training and industry partnerships.
-          </p>
-
-          <div className="mt-8 flex flex-wrap gap-4">
-            <a
-              href="#programs"
-              className="rounded-lg bg-gold px-6 py-3 text-sm font-semibold text-navy transition hover:opacity-90"
-            >
-              Explore Programs
-            </a>
-
-            <a
-              href="#community"
-              className="rounded-lg border border-white px-6 py-3 text-sm font-semibold text-white transition hover:bg-white hover:text-navy"
-            >
-              Join Our Community
-            </a>
-          </div>
-
-          <div className="mt-12 grid grid-cols-2 gap-6 sm:grid-cols-4">
-            {FEATURES.map(({ icon: Icon, label }) => (
-              <div
-                key={label}
-                className="flex flex-col items-center rounded-xl bg-white/10 p-4 backdrop-blur-sm"
+            <div className="mt-10 flex flex-wrap gap-4">
+              <a
+                href="#programs"
+                className="inline-flex items-center gap-2 rounded-lg bg-gold px-7 py-4 text-sm font-semibold text-navy transition hover:opacity-90"
               >
-                <Icon
-                  className="mb-2 h-8 w-8 text-gold"
-                  strokeWidth={1.75}
-                />
-                <span className="text-center text-sm font-medium text-white">
-                  {label}
-                </span>
-              </div>
-            ))}
+                Apply for Programs
+                <ArrowRight size={18} />
+              </a>
+
+              <a
+                href="#community"
+                className="inline-flex items-center gap-2 rounded-lg border border-white px-7 py-4 text-sm font-semibold text-white transition hover:bg-white hover:text-navy"
+              >
+                Become a Partner
+                <ArrowRight size={18} />
+              </a>
+            </div>
           </div>
+        </div>
+
+        {/* Right Image */}
+        <div className="relative min-h-[450px] lg:min-h-full">
+
+          <Image
+            src="/images/hero-engineers.jpg.jpeg"
+            alt="Engineering students"
+            fill
+            priority
+            sizes="50vw"
+            className="object-cover"
+          />
+
+          {/* Dark Overlay */}
+          <div className="absolute inset-0 bg-black/20"></div>
+
+          {/* Orange Curve */}
+          <div className="absolute bottom-0 right-0 h-48 w-72 rounded-tl-full bg-gold"></div>
+
+        </div>
+      </div>
+
+      {/* Floating Stats Card */}
+      <div className="relative mx-auto -mt-16 max-w-6xl px-6 pb-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 overflow-hidden rounded-3xl bg-white shadow-2xl">
+
+          {STATS.map((item) => (
+            <div
+              key={item.label}
+              className="border-r last:border-r-0 border-gray-200 py-10 text-center"
+            >
+              <h3 className="text-4xl font-extrabold text-navy">
+                {item.number}
+              </h3>
+
+              <p className="mt-2 text-sm text-gray-600">
+                {item.label}
+              </p>
+            </div>
+          ))}
+
         </div>
       </div>
     </section>
