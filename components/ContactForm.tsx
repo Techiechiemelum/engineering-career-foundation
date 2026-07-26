@@ -43,7 +43,7 @@ export default function ContactForm() {
         <p className="text-xs font-bold tracking-[0.2em] text-gold">
           GET IN TOUCH
         </p>
-        <h1 className="mt-2 text-3xl sm:text-4xl font-extrabold text-navy">
+        <h1 className="mt-2 text-4xl sm:text-5xl font-extrabold text-navy">
           Contact Us
         </h1>
         <p className="mt-4 text-gray-700 leading-relaxed">

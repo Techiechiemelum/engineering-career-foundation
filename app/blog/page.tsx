@@ -18,7 +18,7 @@ export default async function BlogPage() {
         <p className="text-xs font-bold tracking-[0.2em] text-gold">
           ECF BLOG
         </p>
-        <h1 className="mt-2 text-3xl sm:text-4xl font-extrabold text-navy">
+        <h1 className="mt-2 text-4xl sm:text-5xl font-extrabold text-navy">
           Articles &amp; Insights
         </h1>
 

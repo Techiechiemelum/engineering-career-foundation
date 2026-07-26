@@ -28,7 +28,7 @@ export default function AboutPage() {
 
       <section className="px-6 sm:px-10 lg:px-16 py-16 max-w-3xl mx-auto">
         <p className="text-xs font-bold tracking-[0.2em] text-gold">ABOUT US</p>
-        <h1 className="mt-2 text-3xl sm:text-4xl font-extrabold text-navy">
+        <h1 className="mt-2 text-4xl sm:text-4xl font-extrabold text-navy">
           Bridging Engineering Education and Industry
         </h1>
         <p className="mt-4 text-gray-700 leading-relaxed">

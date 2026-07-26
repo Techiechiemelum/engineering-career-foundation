@@ -16,7 +16,7 @@ export default function FutureVision() {
         <p className="text-xs font-bold tracking-[0.2em] text-gold">
           THE FUTURE WE SEE
         </p>
-        <h2 className="mt-2 text-3xl font-extrabold leading-tight text-navy">
+        <h2 className="mt-2 text-4xl font-extrabold leading-tight text-navy">
           Building Today,
           <br />
           Transforming Tomorrow.

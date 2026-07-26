@@ -28,7 +28,7 @@ export default function Programs() {
   return (
     <section id="programs" className="px-6 sm:px-10 lg:px-16 py-20 border-t border-white-100">
       <p className="text-xs font-bold tracking-[0.2em] text-gold">WHAT WE DO</p>
-      <h2 className="mt-2 text-3xl font-extrabold text-navy">Our Programs</h2>
+      <h2 className="mt-2 text-4xl font-extrabold text-navy">Our Programs</h2>
 
       <div className="mt-8 grid gap-4 sm:grid-cols-3">
         {PROGRAMS.map(({ title, body, image, highlight, href }) => (

@@ -47,7 +47,7 @@ export default function ResourcesPage() {
         <p className="text-xs font-bold tracking-[0.2em] text-gold">
           FOR OUR COMMUNITY
         </p>
-        <h1 className="mt-2 text-3xl sm:text-4xl font-extrabold text-navy">
+        <h1 className="mt-2 text-4xl sm:text-5xl font-extrabold text-navy">
           Resources
         </h1>
         <p className="mt-4 max-w-xl text-gray-700 leading-relaxed">

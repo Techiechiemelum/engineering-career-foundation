@@ -18,7 +18,7 @@ export default function Community() {
         <p className="text-xs font-bold tracking-[0.2em] text-gold">
           BE PART OF A MOVEMENT
         </p>
-        <h2 className="mt-2 text-3xl font-extrabold text-white">
+        <h2 className="mt-2 text-4xl font-extrabold text-white">
           Join Our Community
         </h2>
         <p className="mt-2 font-medium text-white/90">
