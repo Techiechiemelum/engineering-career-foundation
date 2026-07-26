@@ -31,7 +31,7 @@ export default function Hero() {
 
           <div>
 
-            <p className="uppercase tracking-[0.2em] text-gold font-semibold text-sm">
+            <p className="uppercase tracking-[0.2em] text-gold font-semibold text-lg">
               Engineering Career Foundation
             </p>
 
