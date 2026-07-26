@@ -15,7 +15,7 @@ export default function Community() {
       <div className="absolute inset-0 -z-10 bg-navy/80" />
 
       <div className="px-14 sm:px-10 lg:px-16 py-16">
-        <p className="text-xs font-bold tracking-[0.2em] text-gold">
+        <p className="text-lg font-bold tracking-[0.2em] text-gold">
           BE PART OF A MOVEMENT
         </p>
         <h2 className="mt-2 text-4xl font-extrabold text-white">

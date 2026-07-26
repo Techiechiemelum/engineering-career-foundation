@@ -30,10 +30,10 @@ export default function ImpactAreas() {
             >
               <Icon className="h-5 w-5" strokeWidth={1.75} />
             </span>
-            <h3 className="mt-3 font-bold text-navy text-sm">{title}</h3>
-            <ul className="mt-2 space-y-1">
+            <h3 className="mt-3 font-bold text-navy text-lg">{title}</h3>
+            <ul className="mt-2 space-y-1.5">
               {items.map((item) => (
-                <li key={item} className="text-xs text-white-800">
+                <li key={item} className="text-sm text-gray-600">
                   • {item}
                 </li>
               ))}
