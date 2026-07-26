@@ -21,7 +21,7 @@ const VALUES = [
 export default function Purpose() {
   return (
     <section id="about" className="bg-navy px-6 sm:px-10 lg:px-16 py-12">
-      <p className="text-center text-xs font-bold tracking-[0.2em] text-gold">
+      <p className="text-center text-sm font-bold tracking-[0.2em] text-gold">
         OUR PURPOSE
       </p>
 
