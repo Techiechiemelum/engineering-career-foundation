@@ -14,11 +14,12 @@ const BENEFITS = [
   "A network of early-career engineers across Nigeria",
 ];
 
-export default function JoinPage() {
+export default function JoinForm() {
   const [form, setForm] = useState({
     fullName: "",
     email: "",
     interest: "Mentorship",
+    website: "",
   });
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(
     "idle"
@@ -26,16 +27,27 @@ export default function JoinPage() {
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+
+    if (form.website) {
+      // Honeypot triggered — silently pretend success, don't submit
+      setStatus("sent");
+      return;
+    }
+
     setStatus("sending");
     try {
       await fetch(SCRIPT_URL, {
         method: "POST",
         mode: "no-cors",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify({
+          fullName: form.fullName,
+          email: form.email,
+          interest: form.interest,
+        }),
       });
       setStatus("sent");
-      setForm({ fullName: "", email: "", interest: "Mentorship" });
+      setForm({ fullName: "", email: "", interest: "Mentorship", website: "" });
     } catch {
       setStatus("error");
     }
@@ -76,6 +88,17 @@ export default function JoinPage() {
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="mt-10 space-y-4">
+            <input
+              type="text"
+              name="website"
+              value={form.website}
+              onChange={(e) => setForm({ ...form, website: e.target.value })}
+              tabIndex={-1}
+              autoComplete="off"
+              style={{ position: "absolute", left: "-9999px", opacity: 0, height: 0 }}
+              aria-hidden="true"
+            />
+
             <div>
               <label className="block text-sm font-medium text-navy mb-1">
                 Full Name

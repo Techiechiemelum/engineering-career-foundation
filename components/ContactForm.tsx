@@ -8,14 +8,19 @@ const SCRIPT_URL =
   "https://script.google.com/macros/s/AKfycbzi1e7VG4T4mYVePcQcQnsREQ6jW42K4xIIQ6ORHhK5IkI2sIOnf12iMB9i3lFgaQPxzA/exec";
 
 export default function ContactForm() {
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [form, setForm] = useState({ name: "", email: "", message: "", website: "" });
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(
     "idle"
   );
 
   async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    setStatus("sending");
+  e.preventDefault();
+  if (form.website) {
+    // Honeypot triggered — silently pretend success, don't submit
+    setStatus("sent");
+    return;
+  }
+  setStatus("sending");
     try {
       await fetch(SCRIPT_URL, {
         method: "POST",
@@ -24,7 +29,7 @@ export default function ContactForm() {
         body: JSON.stringify(form),
       });
       setStatus("sent");
-      setForm({ name: "", email: "", message: "" });
+      setForm({ name: "", email: "", message: "", website: "" });
     } catch {
       setStatus("error");
     }
@@ -72,6 +77,16 @@ export default function ContactForm() {
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="mt-10 space-y-4">
+            <input
+  type="text"
+  name="website"
+  value={form.website}
+  onChange={(e) => setForm({ ...form, website: e.target.value })}
+  tabIndex={-1}
+  autoComplete="off"
+  style={{ position: "absolute", left: "-9999px", opacity: 0, height: 0 }}
+  aria-hidden="true"
+/>
             <div>
               <label className="block text-sm font-medium text-navy mb-1">
                 Name
