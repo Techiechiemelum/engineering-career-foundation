@@ -27,7 +27,7 @@ export default function AboutPage() {
       <Navbar />
 
       <section className="px-6 sm:px-10 lg:px-16 py-16 max-w-3xl mx-auto">
-        <p className="text-xs font-bold tracking-[0.2em] text-gold">ABOUT US</p>
+        <p className="text-lg font-bold tracking-[0.2em] text-gold">ABOUT US</p>
         <h1 className="mt-2 text-4xl sm:text-4xl font-extrabold text-navy">
           Bridging Engineering Education and Industry
         </h1>
@@ -101,7 +101,7 @@ export default function AboutPage() {
           {VALUES.map(({ icon: Icon, label }) => (
             <div key={label} className="flex flex-col items-center gap-2 text-center">
               <Icon className="h-6 w-6 text-navy" strokeWidth={1.75} />
-              <span className="text-xs font-medium text-gray-700">{label}</span>
+              <span className="text-sm font-medium text-gray-700">{label}</span>
             </div>
           ))}
         </div>
